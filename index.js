@@ -1,10 +1,10 @@
 import express from "express";
 import jsonServer from "json-server";
 import auth from "json-server-auth";
-// import cors from "cors";
+import cors from "cors";
 
 const server = express();
-// server.use(cors());
+server.use(cors());
 
 server.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
